@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import logoImg from './logo.png';
+
 
 const RAW_MENU = `
 Farinata|Semplice|Farina di ceci|5,00
