@@ -137,9 +137,9 @@ const PRODUCTS = RAW_MENU.split("\n").map((row, index) => {
 const CATEGORIES = [...new Set(PRODUCTS.map(item => item.category))];
 
 const PHONES = [
-  ["0124 429627", "+390124429627"],
-  ["349 8937277", "+393498937277"],
-  ["347 9359883", "+393479359883"]
+  ["0124 429627", "0124429627"],
+  ["349 8937277", "3498937277"],
+  ["347 9359883", "3479359883"]
 ];
 
 const FROZEN_INGREDIENTS = [
