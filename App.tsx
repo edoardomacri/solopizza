@@ -663,10 +663,9 @@ export default function SoloPizzaUxBusiness() {
     });
   }, [query, selectedCategory, quick, lang]);
 
-  function go(id) {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
-  }
+  function call(number) {
+  window.open(`tel:${number}`, "_self");
+}
 
   function call(number) {
     window.location.href = `tel:${number}`;
