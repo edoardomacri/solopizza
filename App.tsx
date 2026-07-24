@@ -731,10 +731,7 @@ export default function SoloPizzaUxBusiness() {
             <div className="visual">
               <div className="visualin">
                 <div>
-                <img className="visualLogo" 
-                src={logoImg} 
-                alt="SoloPizza" 
-                />
+                <img className="visualLogo" src="/logo.png" alt="Logo Solo Pizza" />
 
                   <h2>SOLOPIZZA</h2>
                   <p>{t.takeaway}</p>
