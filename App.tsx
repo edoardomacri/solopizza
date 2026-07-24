@@ -161,7 +161,7 @@ const FROZEN_INGREDIENTS = [
 
 const SOCIAL_LINKS = [
   ["Instagram", "https://www.instagram.com/solopizzaaglie/"],
-  ["Facebook", "https://www.facebook.com/SolopizzaAgli%C3%A8/"],
+  ["Facebook", "https://www.facebook.com/SolopizzaAglie/"],
   ["Google", "https://maps.app.goo.gl/LdknRz7nYuBGQZbUA"],
   ["Tripadvisor", "https://www.tripadvisor.it/Restaurant_Review-g2360021-d7351888-Reviews-Solo_Pizza-Aglie_Province_of_Turin_Piedmont.html"]
 ];
