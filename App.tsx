@@ -719,9 +719,9 @@ export default function SoloPizzaUxBusiness() {
               <h1><span style={{ color: "var(--sky)" }}>{t.titleA}</span> <span className="orange">{t.titleB}</span></h1>
               <p className="lead">{t.lead}</p>
               <div className="actions">
-                <button className="orangebtn" onClick={() => call("+390124429627")}>☎ 0124 429627</button>
-                <button className="outline" onClick={() => go("menu")}>{t.discover}</button>
-              </div>
+  <a className="orangebtn" href="tel:0124429627">☎ 0124 429627</a>
+  <a className="outline" href="#menu">{t.discover}</a>
+</div>
             </div>
 
             <div className="visual">
