@@ -703,12 +703,12 @@ export default function SoloPizzaUxBusiness() {
         </div>
 
         <nav className={`mobile ${mobileOpen ? "open" : ""}`}>
-          <button className="navbtn" onClick={() => go("home")}>{t.home}</button>
-          <button className="navbtn" onClick={() => go("menu")}>{t.menu}</button>
-          <button className="navbtn" onClick={() => go("formati")}>{t.formats}</button>
-          <button className="navbtn" onClick={() => go("contatti")}>{t.contacts}</button>
-          <button className="orangebtn" onClick={() => call("+390124429627")}>{t.order}</button>
-        </nav>
+  <a className="navbtn" href="#home" onClick={closeMobile}>{t.home}</a>
+  <a className="navbtn" href="#menu" onClick={closeMobile}>{t.menu}</a>
+  <a className="navbtn" href="#formati" onClick={closeMobile}>{t.formats}</a>
+  <a className="navbtn" href="#contatti" onClick={closeMobile}>{t.contacts}</a>
+  <a className="orangebtn" href="tel:0124429627" onClick={closeMobile}>{t.order}</a>
+</nav>
       </header>
 
       <main>
