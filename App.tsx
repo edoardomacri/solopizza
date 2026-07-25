@@ -889,8 +889,8 @@ export default function SoloPizzaUxBusiness() {
             <div className="contactB">
               <h3>{t.callUs}</h3>
               {PHONES.map(([label, number]) => (
-                <button className="phone" key={number} onClick={() => call(number)}>☎ {label}</button>
-              ))}
+  <a className="phone" key={number} href={`tel:${number}`}>☎ {label}</a>
+))}
 
               <h3 style={{ marginTop: 30 }}>{t.social}</h3>
               <p className="socialName"><b>Solopizza Agliè</b></p>
