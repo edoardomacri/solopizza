@@ -663,14 +663,9 @@ export default function SoloPizzaUxBusiness() {
     });
   }, [query, selectedCategory, quick, lang]);
 
-  function call(number) {
-  window.open(`tel:${number}`, "_self");
+  function closeMobile() {
+  setMobileOpen(false);
 }
-
-  function call(number) {
-    window.location.href = `tel:${number}`;
-  }
-
   function categoryLabel(category) {
     if (category === "Tutto") return lang === "it" ? "Tutto" : "All";
     return lang === "en" ? (CATEGORY_EN[category] || category) : category;
