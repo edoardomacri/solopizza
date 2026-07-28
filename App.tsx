@@ -1229,7 +1229,10 @@ const cartTotal = cart.reduce(
             </main>
 
       {cart.length > 0 && (
-        <section className={`cartPanel ${cartOpen ? "open" : ""}`}>
+  <section
+    className={`cartPanel ${cartOpen ? "open" : ""}`}
+    id="carrello"
+  >
           <div className="wrap">
 
             <div className="cartHeader">
