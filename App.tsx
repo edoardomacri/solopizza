@@ -646,6 +646,8 @@ export default function SoloPizzaUxBusiness() {
   const [quick, setQuick] = useState("Tutto");
   const [darkMode, setDarkMode] = useState(false);
   const [lang, setLang] = useState("it");
+  const [cart, setCart] = useState([]);
+const [cartOpen, setCartOpen] = useState(false);
 
   const t = LABELS[lang];
 
