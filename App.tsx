@@ -809,6 +809,24 @@ const CSS = `
   cursor:pointer;
 }
 
+.backToMenu{
+  margin-top:15px;
+  margin-left:8px;
+  padding:11px 17px;
+  border:0;
+  background:var(--blue);
+  color:var(--cream);
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.backToMenu:hover{
+  transform:translateY(-2px);
+  opacity:.9;
+}
+
 .floatingCart{
   position:fixed;
   right:22px;
