@@ -876,16 +876,36 @@ const cartTotal = cart.reduce(
                       return (
                         <article className="card" key={item.id}>
                           <div className="cardTop">
-                            <span className="nameWithIcons">
-                              {item.name}
-                              {icons.length ? (
-                                <span className="icons">
-                                  {icons.map(([icon, title]) => <span className="iconBadge" title={title} key={`${item.id}-${title}`}>{icon}</span>)}
-                                </span>
-                              ) : null}
-                            </span>
-                            <span className="price">€{item.price}</span>
-                          </div>
+  <span className="nameWithIcons">
+    {item.name}
+
+    {icons.length ? (
+      <span className="icons">
+        {icons.map(([icon, title]) => (
+          <span
+            className="iconBadge"
+            title={title}
+            key={`${item.id}-${title}`}
+          >
+            {icon}
+          </span>
+        ))}
+      </span>
+    ) : null}
+  </span>
+
+  <div className="productActions">
+    <span className="price">€{item.price}</span>
+
+    <button
+      className="addButton"
+      onClick={() => addToCart(item)}
+      aria-label={`Aggiungi ${item.name} alla lista`}
+    >
+      +
+    </button>
+  </div>
+</div>
 
                           {item.ingredients ? <p>{renderedIngredients(item)}</p> : null}
 
