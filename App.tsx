@@ -898,6 +898,11 @@ const CSS = `
     bottom:16px;
   }
 
+  .backToMenu{
+  margin-left:0;
+  width:100%;
+}
+
 }`;
 
 export default function SoloPizzaUxBusiness() {
