@@ -650,7 +650,56 @@ export default function SoloPizzaUxBusiness() {
 const [cartOpen, setCartOpen] = useState(false);
 
   const t = LABELS[lang];
+function addToCart(item) {
+  setCart(currentCart => {
+    const existing = currentCart.find(cartItem => cartItem.id === item.id);
 
+    if (existing) {
+      return currentCart.map(cartItem =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      );
+    }
+
+    return [
+      ...currentCart,
+      {
+        ...item,
+        quantity: 1
+      }
+    ];
+  });
+
+  setCartOpen(true);
+}
+
+function removeFromCart(itemId) {
+  setCart(currentCart =>
+    currentCart
+      .map(item =>
+        item.id === itemId
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+      .filter(item => item.quantity > 0)
+  );
+}
+
+function clearCart() {
+  setCart([]);
+}
+
+const cartCount = cart.reduce(
+  (total, item) => total + item.quantity,
+  0
+);
+
+const cartTotal = cart.reduce(
+  (total, item) =>
+    total + parseFloat(item.price.replace(",", ".")) * item.quantity,
+  0
+);
   const results = useMemo(() => {
     const term = query.trim().toLowerCase();
 
