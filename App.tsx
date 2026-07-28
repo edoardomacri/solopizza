@@ -983,7 +983,122 @@ const cartTotal = cart.reduce(
             </div>
           </div>
         </section>
-      </main>
+            </main>
+
+      {cart.length > 0 && (
+        <section className={`cartPanel ${cartOpen ? "open" : ""}`}>
+          <div className="wrap">
+
+            <div className="cartHeader">
+              <div>
+                <span className="eyebrow">
+                  {lang === "it" ? "La tua lista" : "Your list"}
+                </span>
+
+                <h2>
+                  🛒 {lang === "it" ? "La tua lista" : "Your list"}
+                </h2>
+              </div>
+
+              <button
+                className="cartClose"
+                onClick={() => setCartOpen(false)}
+              >
+                ×
+              </button>
+            </div>
+
+            <div className="cartItems">
+              {cart.map(item => (
+                <div className="cartItem" key={item.id}>
+
+                  <div className="cartItemInfo">
+                    <strong>{item.name}</strong>
+                    <span>
+                      €{item.price} × {item.quantity}
+                    </span>
+                  </div>
+
+                  <div className="cartItemActions">
+
+                    <button
+                      onClick={() => removeFromCart(item.id)}
+                    >
+                      −
+                    </button>
+
+                    <strong>{item.quantity}</strong>
+
+                    <button
+                      onClick={() => addToCart(item)}
+                    >
+                      +
+                    </button>
+
+                  </div>
+
+                </div>
+              ))}
+            </div>
+
+            <div className="cartBottom">
+
+              <div className="cartTotal">
+                <span>
+                  {lang === "it" ? "Totale indicativo" : "Estimated total"}
+                </span>
+
+                <strong>
+                  €{cartTotal.toFixed(2).replace(".", ",")}
+                </strong>
+              </div>
+
+              <div className="cartCallBox">
+
+                <h3>
+                  📞 {lang === "it"
+                    ? "Vuoi prenotare questa lista?"
+                    : "Would you like to order this list?"}
+                </h3>
+
+                <p>
+                  {lang === "it"
+                    ? "Chiama la pizzeria e comunica la tua lista. Ti aspettiamo!"
+                    : "Call the pizzeria and tell us your list. See you soon!"}
+                </p>
+
+                <div className="cartPhones">
+
+                  <a href="tel:0124429627">
+                    ☎ 0124 429627
+                  </a>
+
+                  <a href="tel:3498937277">
+                    ☎ 349 8937277
+                  </a>
+
+                  <a href="tel:3479359883">
+                    ☎ 347 9359883
+                  </a>
+
+                </div>
+
+              </div>
+
+              <button
+                className="clearCart"
+                onClick={clearCart}
+              >
+                {lang === "it"
+                  ? "Svuota lista"
+                  : "Clear list"}
+              </button>
+
+            </div>
+
+          </div>
+        </section>
+      )}
 
       <footer className="footer">
         <div className="wrap foot">
