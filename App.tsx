@@ -637,7 +637,245 @@ const CSS = `
     flex-direction:column;
   }
 }
-`;
+.productActions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.addButton{
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:50%;
+  background:var(--orange);
+  color:white;
+  font-size:25px;
+  font-weight:900;
+  line-height:1;
+  cursor:pointer;
+  transition:transform .2s ease,background .2s ease;
+}
+
+.addButton:hover{
+  transform:scale(1.1);
+}
+
+.cartPanel{
+  background:var(--cream);
+  color:var(--blue);
+  padding:55px 0;
+  border-top:5px solid var(--orange);
+}
+
+.cartHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+.cartHeader h2{
+  margin:8px 0 0;
+  font-size:42px;
+  letter-spacing:-2px;
+}
+
+.cartClose{
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:var(--blue);
+  color:var(--cream);
+  font-size:28px;
+  cursor:pointer;
+}
+
+.cartItems{
+  display:grid;
+  gap:10px;
+}
+
+.cartItem{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding:15px 18px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:15px;
+}
+
+.cartItemInfo{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.cartItemInfo span{
+  opacity:.65;
+  font-size:14px;
+}
+
+.cartItemActions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.cartItemActions button{
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:50%;
+  background:var(--soft);
+  color:var(--blue);
+  font-size:22px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.cartBottom{
+  margin-top:25px;
+}
+
+.cartTotal{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background:var(--soft);
+  border-radius:18px;
+  font-size:20px;
+}
+
+.cartTotal strong{
+  color:var(--orange);
+  font-size:27px;
+}
+
+.cartCallBox{
+  margin-top:18px;
+  padding:25px;
+  background:var(--orange);
+  color:white;
+  border-radius:22px;
+}
+
+.cartCallBox h3{
+  margin-top:0;
+  font-size:24px;
+}
+
+.cartCallBox p{
+  line-height:1.5;
+}
+
+.cartPhones{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:18px;
+}
+
+.cartPhones a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 18px;
+  border-radius:999px;
+  background:white;
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:900;
+}
+
+.clearCart{
+  margin-top:15px;
+  padding:11px 17px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--blue);
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.floatingCart{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:50;
+  width:65px;
+  height:65px;
+  border:0;
+  border-radius:50%;
+  background:var(--orange);
+  color:white;
+  font-size:27px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  cursor:pointer;
+}
+
+.floatingCart span{
+  position:absolute;
+  top:-5px;
+  right:-5px;
+  width:25px;
+  height:25px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--blue);
+  color:white;
+  font-size:12px;
+  font-weight:900;
+}
+
+@media(max-width:540px){
+
+  .productActions{
+    gap:7px;
+  }
+
+  .addButton{
+    width:40px;
+    height:40px;
+  }
+
+  .cartPanel{
+    padding:40px 0;
+  }
+
+  .cartHeader h2{
+    font-size:32px;
+  }
+
+  .cartItem{
+    align-items:flex-start;
+  }
+
+  .cartItemActions{
+    flex-shrink:0;
+  }
+
+  .cartPhones{
+    display:grid;
+  }
+
+  .cartPhones a{
+    width:100%;
+  }
+
+  .floatingCart{
+    right:16px;
+    bottom:16px;
+  }
+
+}`;
 
 export default function SoloPizzaUxBusiness() {
   const [mobileOpen, setMobileOpen] = useState(false);
