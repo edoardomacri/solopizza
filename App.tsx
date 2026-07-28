@@ -1332,13 +1332,27 @@ const cartTotal = cart.reduce(
               </div>
 
               <button
-                className="clearCart"
-                onClick={clearCart}
-              >
-                {lang === "it"
-                  ? "Svuota lista"
-                  : "Clear list"}
-              </button>
+  className="clearCart"
+  onClick={clearCart}
+>
+  {lang === "it"
+    ? "Svuota lista"
+    : "Clear list"}
+</button>
+
+<button
+  className="backToMenu"
+  onClick={() => {
+    document.getElementById("menu")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }}
+>
+  {lang === "it"
+    ? "↑ Torna al menu"
+    : "↑ Back to menu"}
+</button>
 
             </div>
 
