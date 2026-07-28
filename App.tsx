@@ -1348,7 +1348,17 @@ const cartTotal = cart.reduce(
 {cart.length > 0 && (
   <button
     className="floatingCart"
-    onClick={() => setCartOpen(!cartOpen)}
+    onClick={() => {
+      setCartOpen(true);
+
+      setTimeout(() => {
+        document.getElementById("carrello")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }, 50);
+    }}
+    aria-label="Vai alla tua lista"
   >
     🛒
     <span>
