@@ -662,10 +662,15 @@ const CSS = `
 }
 
 .cartPanel{
+  display:none;
   background:var(--cream);
   color:var(--blue);
   padding:55px 0;
   border-top:5px solid var(--orange);
+}
+
+.cartPanel.open{
+  display:block;
 }
 
 .cartHeader{
