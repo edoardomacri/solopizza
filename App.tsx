@@ -1099,7 +1099,17 @@ const cartTotal = cart.reduce(
           </div>
         </section>
       )}
-
+{cart.length > 0 && (
+  <button
+    className="floatingCart"
+    onClick={() => setCartOpen(!cartOpen)}
+  >
+    🛒
+    <span>
+      {cartCount}
+    </span>
+  </button>
+)}
       <footer className="footer">
         <div className="wrap foot">
           <span>© 2026 SOLOPIZZA · Pizzeria da asporto · Forno a legna</span>
